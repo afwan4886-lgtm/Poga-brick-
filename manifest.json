@@ -1,12 +1,20 @@
 {
-  "background_color": "#ffffff",
-  "dir": "ltr",
-  "display": "standalone",
   "name": "Poga brick",
-  "orientation": "any",
-  "scope": "/",
   "short_name": "poga brick",
+  "description": "A fun and exciting brick-breaking game.",
+  "id": "com.poga.brick",
   "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
   "theme_color": "#ffffff",
-  "id": "com.poga.brick"
+  "orientation": "any",
+  "dir": "ltr",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "379581_3.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
 }
