@@ -1,0 +1,12 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Poga brick",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "poga brick",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "id": "com.poga.brick"
+}
