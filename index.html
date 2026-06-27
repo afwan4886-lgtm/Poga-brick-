@@ -665,7 +665,7 @@
                     lastValidTarget = canPlace ? target : null;
                 } else {
                     if (activePreviewKey !== "") { clearPreviews(); activePreviewKey = ""; }
-                    lastValidTarget = null;
+                    ValidTarget = null;
                 }
             }
 
@@ -738,14 +738,9 @@
             if (totalLines > 0) {
                 const isCombo = totalLines >= 2;
                 if(isCombo) {
-                    playSound('combo');
-                    triggerVibration(50);
                     celebrationOverlay.innerText = `MEGA ${totalLines} LINE BLAST!`;
                     celebrationOverlay.classList.add('active');
                     setTimeout(() => celebrationOverlay.classList.remove('active'), 1000);
-                } else {
-                    playSound('pop');
-                    triggerVibration(25);
                 }
 
                 const cells = document.querySelectorAll('.cell');
@@ -771,6 +766,15 @@
                     updateGridUI();
                 }, 300);
             }
+        }
+
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('data:text/javascript;charset=utf-8,' + encodeURIComponent(`
+                    self.addEventListener('fetch', (e) => {});
+                `)).then(reg => console.log('PWA SW registered')).catch(err => console.log('SW failed', err));
+            });
         }
 
         createGrid();
