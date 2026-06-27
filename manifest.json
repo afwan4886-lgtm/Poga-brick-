@@ -1,0 +1,13 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Pogabrick",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Pogabrick",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "id": "Pogabrick ",
+  "description": "A fun and addictive premium block puzzle game where you drop shapes on the grid to blast lines and score high."
+}
